@@ -1,0 +1,20 @@
+3250
+Doctora Dulce Mariana Gomez Paredes
+Sala A
+5
+Terapia
+1700
+Medico Javier Aldama San Pedro
+Sala A
+4
+Consultas
+3100
+Doctor Augusto Aguirre de la Oya
+Sala A
+3
+Consultas
+1500
+Doc Hernan Cortez
+Sala B
+10
+Otorrinolaringologo

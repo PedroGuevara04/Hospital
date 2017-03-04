@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1488437215 source:c:\users\gerardo\desktop\hospitalproyect\encabezado.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"encabezadoh.h"
+
+1488436762 c:\users\gerardo\desktop\hospitalproyect\encabezadoh.h
+
+1488437363 source:c:\users\gerardo\desktop\hospitalproyect\main.c
+	<stdio.h>
+	<stdlib.h>
+	"encabezadoh.h"
+
+1488437205 source:c:\users\gerardo\desktop\hospitalproyect\menu.c
+	<stdio.h>
+	"encabezadoh.h"
+
+1488437192 source:c:\users\gerardo\desktop\hospitalproyect\segudoencabezado.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"encabezadoh.h"
+
+1488437475 source:d:\archivoss\hospitalproyect\encabezado.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"encabezadoh.h"
+
+1488436762 d:\archivoss\hospitalproyect\encabezadoh.h
+
+1488437363 source:d:\archivoss\hospitalproyect\main.c
+	<stdio.h>
+	<stdlib.h>
+	"encabezadoh.h"
+
+1488437205 source:d:\archivoss\hospitalproyect\menu.c
+	<stdio.h>
+	"encabezadoh.h"
+
+1488437192 source:d:\archivoss\hospitalproyect\segudoencabezado.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"encabezadoh.h"
+
+1488557548 source:c:\users\pedrojosue\desktop\hospitalproyect\encabezado.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"encabezadoh.h"
+
+1488557548 c:\users\pedrojosue\desktop\hospitalproyect\encabezadoh.h
+
+1488560227 source:c:\users\pedrojosue\desktop\hospitalproyect\main.c
+	<stdio.h>
+	<stdlib.h>
+	"encabezadoh.h"
+
+1488437205 source:c:\users\pedrojosue\desktop\hospitalproyect\menu.c
+	<stdio.h>
+	"encabezadoh.h"
+
+1488558424 source:c:\users\pedrojosue\desktop\hospitalproyect\segudoencabezado.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"encabezadoh.h"
+
+1488560292 source:c:\users\pedrojosue\desktop\hospitalproyect\admin.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	"encabezadoh.h"
+
