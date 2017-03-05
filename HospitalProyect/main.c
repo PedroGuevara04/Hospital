@@ -9,7 +9,7 @@ int main()
     Doctor *doc, *segmento;
     Reserva *arreglo,*uReserva;
         int indice,i;
-        int dato,opcion, pos, indice2;
+        int dato,opcion, pos, indice2, adm;
     indice2= -1;
 
     if (fp==NULL){
@@ -32,7 +32,7 @@ int main()
     fclose(fp);
     //=============Menu
     do{
-        opcion = Menu("\n1)Agregar Cita\n2)Cancelar cita\n3)Actualizar\n4)Buscar cita\n5)Listar\n6)Ordenar\n7)Administrador\n8)Salir\nOpcion: ",8);
+        opcion = Menu("\n1)Agregar Cita\n2)Cancelar cita\n3)Actualizar cita\n4)Buscar cita\n5)Listar citas\n6)Administrador\n7)Salir\nOpcion: ",7);
             switch(opcion){
                 case 1: //Agrega cita
                      if (!Lleno(indice2)){
@@ -63,10 +63,9 @@ int main()
                 case 5: //Listar
                     Listar(arreglo, indice2);
                 break;
-                case 6://ordenar
-                    break;
-                case 7:
-                    Administrador();
+                case 6:
+                   adm=Administrador();
+
                     break;
 
             }

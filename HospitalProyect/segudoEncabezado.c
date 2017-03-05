@@ -28,10 +28,10 @@ void Capturar(Reserva *uReserva,Doctor *segmento){
    gets(uReserva->Motivo);
    printf("\nNombre de la persona: ");
    fflush(stdin);
-   gets(uReserva->Pasiente.nombre);
-   printf("\nApellido del pasiente: ");
+   gets(uReserva->Paciente.nombre);
+   printf("\nApellido del paciente: ");
    fflush(stdin);
-   gets(uReserva->Pasiente.apellido);
+   gets(uReserva->Paciente.apellido);
    printf("\nCuanto puede aportar economicamente : ");
    scanf("%f",&uReserva->precio);
 
@@ -45,7 +45,7 @@ void Insertar(Reserva dato, Reserva *arreglo, int *indice2){ //******* Cambia: t
     arreglo[*indice2]= dato;
 }
 void listarReserva(Reserva uReserva){
-  printf("\n%d\t%s\t%s\t%s\t%.2f\n", uReserva.claveS,uReserva.Motivo,uReserva.Pasiente.nombre,uReserva.Pasiente.apellido,uReserva.precio  );
+  printf("\n%d\t%s\t%s\t%s\t%.2f\n", uReserva.claveS,uReserva.Motivo,uReserva.Paciente.nombre,uReserva.Paciente.apellido,uReserva.precio  );
 }
 
 void Listar(Reserva arreglo[],int indice2){ //****** Cambia: tipos de datos

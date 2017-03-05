@@ -17,6 +17,7 @@ typedef struct {
     char * nombre;
     DatosA ubicacion;
 } Doctor;
+
 //===Segunda parte;
 typedef struct {
    char nombre[MAX];
@@ -26,9 +27,13 @@ typedef struct {
 typedef struct {
    int claveS;//clave
    char Motivo[MAX];//Titulo
-   datosP Pasiente;
+   datosP Paciente;
    float precio;
 } Reserva;//libro
+
+typedef struct{//Seccion de hospital que contiene sus propios doctores y pacientes
+
+}SeccionH;
 
 int Lleno(int indice);
 int Vacio(int indice);

@@ -5,7 +5,7 @@
 #define DIR "Cont.txt"
 #include "encabezadoh.h"
 
-void Administrador(){
+int Administrador(){
     char usuario[MAX];
     char contrasenia[MAX];
     int a;
@@ -19,9 +19,11 @@ void Administrador(){
     printf("\nContraseña: ");
     gets(contrasenia);
     a=strcmp(contrasenia,con);
-    if(a==0)
+    if(a==0){
         printf("Contraseña correcta.");
+        return 0;
+        }
     else
-        return;
+        return 1;
 
 }
