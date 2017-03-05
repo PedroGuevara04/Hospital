@@ -44,8 +44,13 @@ void Listar(Reserva arreglo[],int indice);
 int Buscar(int dato, Reserva arreglo[], int indice);
 Reserva Borrar (Reserva *arreglo,int pos, int *indice );
 void ListarDato(Reserva arreglo[],int pos);
+void Actualizar(int pos, Reserva *uReserva, Doctor *segmento);
+void InsertarActualizacion(Reserva dato, Reserva *arreglo, int *indice2);
 //=====
 
+int PacienteMejor(Reserva *arreglo, int max2);
+int PacientePeor(Reserva *arreglo, int max2);
+float Presupuesto(Reserva *arreglo, int max2);
 
 Doctor *AddDoctor();
 void fullEst(FILE *fp,Doctor *nDoc);

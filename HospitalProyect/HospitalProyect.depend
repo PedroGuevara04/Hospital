@@ -75,16 +75,16 @@
 	<windows.h>
 	"encabezadoh.h"
 
-1488677483 source:c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\admin.c
+1488756481 source:c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\admin.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 	<windows.h>
 	"encabezadoh.h"
 
-1488677585 c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\encabezadoh.h
+1488742840 c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\encabezadoh.h
 
-1488663566 source:c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\encabezado.c
+1488689503 source:c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\encabezado.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
@@ -94,13 +94,13 @@
 	<stdio.h>
 	"encabezadoh.h"
 
-1488671068 source:c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\segudoencabezado.c
+1488742874 source:c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\segudoencabezado.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 	"encabezadoh.h"
 
-1488676128 source:c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\main.c
+1488749335 source:c:\users\luis\desktop\desarrollo\proyectos\hospital\hospitalproyect\main.c
 	<stdio.h>
 	<stdlib.h>
 	"encabezadoh.h"

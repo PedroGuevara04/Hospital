@@ -79,5 +79,47 @@ void ListarDato(Reserva arreglo[],int pos){ //
     listarReserva(arreglo[pos]);
 }
 
+void Actualizar(int pos, Reserva *uReserva, Doctor *segmento) {
+    int opcion,doc;
+    system("cls");
+      printf("Que quieres actualizar.\n1)Motivo\n2)Cita\n3)Nombre\n4)Apellido\n5)Aportacion economica\n6)Doctor\nOpcion: ");
+      scanf("%d", &opcion);
+  switch (opcion)
+  {
+  case 1:
+        printf("\nMotivo: ");
+        fflush(stdin);
+        gets(uReserva->Motivo);
+   break;
+  case 2:
+        printf("\nNuevo numero de cita: ");
+        scanf("%d",&uReserva->claveS);
+    break;
+  case 3:
+        printf("\nNombre de la persona: ");
+        fflush(stdin);
+        gets(uReserva->Paciente.nombre);
+   break;
+  case 4:
+        printf("\nApellido del paciente: ");
+        fflush(stdin);
+        gets(uReserva->Paciente.apellido);
+    break;
+  case 5:
+    printf("\nCuanto puede aportar economicamente : ");
+   scanf("%f",&uReserva->precio);
+   break;
+  case 6:
+    printf("Elige un doctor: ");
+    doc=Menu("\n1) Doctora Dulce Mariana Gomez Paredes\n2) Medico Javier Aldama San Pedro\n3) Doctor Augusto Aguirre de la Oya\n4) Doc Hernan Cortez\n",4);
+    printf("\nHas elegido el doctor: %s",segmento[doc-1].nombre);
+    break;
+  }
+}
+
+void InsertarActualizacion(Reserva dato, Reserva *arreglo, int *indice2){ //******* Cambia: tipos de dato
+    arreglo[*indice2]= dato;
+}
+
 
 

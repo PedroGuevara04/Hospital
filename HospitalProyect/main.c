@@ -10,6 +10,7 @@ int main()
     Reserva *arreglo,*uReserva;
         int indice,i;
         int dato,opcion, pos, indice2, adm,opcion2;
+        int pres;
     indice2= -1;
 
     if (fp==NULL){
@@ -52,6 +53,12 @@ int main()
                         Borrar(arreglo,pos, &indice2);
                 break;
                 case 3: //actualizar
+                    printf("Dame el numero de cita a actualizar: ");
+                    scanf("%d",&dato);
+                    pos= Buscar(dato,arreglo,indice);
+                    if (pos !=-1)
+                        Actualizar(pos, uReserva,segmento);
+                        InsertarActualizacion(*uReserva,arreglo,&indice2); //PARA QUE SOBREESCRIBA LOS DATOS SIN AUMENTAR INDICE
                     break;
                 case 4: //Buscar
                     printf("Clave de la cita a buscar :");
@@ -66,9 +73,11 @@ int main()
                 case 6:
                        adm=Administrador();
                        if(adm==0){
-                        opcion2=Menu("Seleccione una estadística\n1.Doctor con mas pacientes\n2.Sala con mas pacientes\n4.Presupuesto del mes\n5.Pacientes con peor salud\n6.Pacientes con mejor salud\n7.\n8.\n9.Salir\n",9);
+                        opcion2=Menu("Seleccione una estadística\n1.Presupuesto del mes\n2.Pacientes con peor salud\n3.Pacientes con mejor salud\n4.\n5.\n6.\n7.\n8.\n9.Salir\n",9);
                         switch(opcion2){
                         case 1:
+                                pres=Presupuesto(arreglo, indice2);
+                                printf("El presupuesto del mes es: %.2f",pres);
                             break;
                         case 2:
                             break;
