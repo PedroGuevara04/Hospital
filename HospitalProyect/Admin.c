@@ -27,3 +27,5 @@ int Administrador(){
         return 1;
 
 }
+
+

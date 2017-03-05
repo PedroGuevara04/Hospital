@@ -31,8 +31,7 @@ typedef struct {
    float precio;
 } Reserva;//libro
 
-typedef struct{//Seccion de hospital que contiene sus propios doctores y pacientes
-
+typedef struct{//Seccion de hospital que contiene sus propios doctores, pacientes y salas
 }SeccionH;
 
 int Lleno(int indice);
@@ -50,7 +49,7 @@ void ListarDato(Reserva arreglo[],int pos);
 
 Doctor *AddDoctor();
 void fullEst(FILE *fp,Doctor *nDoc);
-void listaDoc(Doctor UDoc);
+void listaDoc(Doctor *UDoc, int major);
 void freeMem(Doctor *UDoc);
 
 #endif // ENCABEZADOH_H_INCLUDED

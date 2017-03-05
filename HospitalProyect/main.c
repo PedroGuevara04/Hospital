@@ -9,7 +9,7 @@ int main()
     Doctor *doc, *segmento;
     Reserva *arreglo,*uReserva;
         int indice,i;
-        int dato,opcion, pos, indice2, adm;
+        int dato,opcion, pos, indice2, adm,opcion2;
     indice2= -1;
 
     if (fp==NULL){
@@ -27,8 +27,7 @@ int main()
         free(doc);
         indice++;
     }
-     for (i=0; i<indice; i++)
-        listaDoc(segmento[i]);
+    listaDoc(segmento,indice);
     fclose(fp);
     //=============Menu
     do{
@@ -52,7 +51,8 @@ int main()
                     if (pos !=-1)
                         Borrar(arreglo,pos, &indice2);
                 break;
-                //case 3: actualizar
+                case 3: //actualizar
+                    break;
                 case 4: //Buscar
                     printf("Clave de la cita a buscar :");
                     scanf("%d",&dato);
@@ -64,8 +64,33 @@ int main()
                     Listar(arreglo, indice2);
                 break;
                 case 6:
-                   adm=Administrador();
-
+                       adm=Administrador();
+                       if(adm==0){
+                        opcion2=Menu("Seleccione una estadística\n1.Doctor con mas pacientes\n2.Sala con mas pacientes\n4.Presupuesto del mes\n5.Pacientes con peor salud\n6.Pacientes con mejor salud\n7.\n8.\n9.Salir\n",9);
+                        switch(opcion2){
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 6:
+                            break;
+                        case 7:
+                            break;
+                        case 8:
+                            break;
+                        case 9:
+                            break;
+                        }
+                       }
+                       else{
+                        printf("No tiene autorizacion\n");
+                       }
                     break;
 
             }
