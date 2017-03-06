@@ -6,33 +6,66 @@
 #include "encabezadoh.h"
 
 int Administrador(){
+    FILE *con;
     char usuario[MAX];
-    char contrasenia[MAX], auxContrasenia[]="gordito21";
+    char cadena[MAX],contrasenia[MAX];
     int a;
 
-    //FILE *con=fopen(DIR,"r");
+    con=fopen(DIR,"rt");
 
     system("cls");
-    printf("Usuario: ");
+    printf("\n\tUsuario: ");
     fflush(stdin);
     gets(usuario);
-    printf("\nContraseña: ");
+    printf("\n\n\tPassword: ");
     fflush(stdin);
     gets(contrasenia);
-    //fscanf(con,"%s",auxContrasenia);
-    //printf("C:%s",auxContrasenia);
-    a=strcmp(contrasenia,auxContrasenia);
+
+    while (feof(con) == 0)
+    {
+        fgets(cadena,MAX,con);
+    }
+    a=strcmp(contrasenia,cadena);
+
     if(a==0){
-        printf("Contraseña correcta. \n");
+        printf("Exito\n");
         return 0;
         }
     else{
-        printf("Contraseña incorrecta. \n");
+        printf("Error\n");
         return 1;
         }
-
+    fclose(con);
 }
 
+int doctorMejor(Doctor *doctores, int max){
+    int ret=0, aux=0;
+    int j;
+    for(j=0;j<max;j++,doctores++){
+        if(doctores->contadorPacientes>aux){
+            aux=doctores[j].contadorPacientes;
+            ret=j;
+        }
+    }
+    return ret;
+}
+
+int doctorPeor(Doctor *doctores, int max){
+    int ret=0, aux=MAX;
+    int j;
+    for(j=0;j<max;j++,doctores++){
+        if(doctores->contadorPacientes<aux){
+            aux=doctores[j].contadorPacientes;
+            ret=j;
+        }
+    }
+    return ret;
+}
+
+int PacientePeor(Reserva *arreglo, int max){
+    int ret=0;
+    return ret;
+}
 
 int PacienteMejor(Reserva *arreglo, int max){
     int ret=0;
@@ -43,16 +76,37 @@ int PacienteMejor(Reserva *arreglo, int max){
     return ret;
 }
 
-int PacientePeor(Reserva *arreglo, int max){
+int doctorRico(Doctor *doctores, int max){
     int ret=0;
+    float aux=0;
+    int j;
+    for(j=0;j<max;j++,doctores++){
+        if(doctores->recaudacion>aux){
+            aux=doctores[j].recaudacion;
+            ret=j;
+        }
+    }
+    return ret;
+}
+
+int doctorPobre(Doctor *doctores, int max){
+    int ret=0, aux=MAX;
+    int j;
+    for(j=0;j<max;j++,doctores++){
+        if(doctores->contadorPacientes<aux){
+            aux=doctores[j].contadorPacientes;
+            ret=j;
+        }
+    }
     return ret;
 }
 
 float Presupuesto(Reserva *arreglo, int max){
     float ret=0.0;
-    int j;
-    for(j=0;j<max;j++,arreglo++){
-        ret=ret+((*arreglo).precio);
+    int cont;
+    for(cont=0;cont<=max;cont++){
+        ret=ret+(arreglo[cont].precio);
     }
+    //printf("tot: %.2f",ret);
     return ret;
 }

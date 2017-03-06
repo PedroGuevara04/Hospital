@@ -16,6 +16,8 @@ typedef struct {
     int CedDoctor;
     char * nombre;
     DatosA ubicacion;
+    int contadorPacientes;
+    float recaudacion;
 } Doctor;
 
 //===Segunda parte;
@@ -51,6 +53,10 @@ void InsertarActualizacion(Reserva dato, Reserva *arreglo, int *indice2);
 int PacienteMejor(Reserva *arreglo, int max2);
 int PacientePeor(Reserva *arreglo, int max2);
 float Presupuesto(Reserva *arreglo, int max2);
+int doctorPeor(Doctor *arreglo, int max2);
+int doctorMejor(Doctor *doctores, int max2);
+int doctorPobre(Doctor *arreglo, int max2);
+int doctorRico(Doctor *doctores, int max2);
 
 Doctor *AddDoctor();
 void fullEst(FILE *fp,Doctor *nDoc);

@@ -38,6 +38,8 @@ void Capturar(Reserva *uReserva,Doctor *segmento){
     printf("Elige un doctor: ");
     doc=Menu("\n1) Doctora Dulce Mariana Gomez Paredes\n2) Medico Javier Aldama San Pedro\n3) Doctor Augusto Aguirre de la Oya\n4) Doc Hernan Cortez\n",4);
     printf("Has elegido el doctor: %s",segmento[doc-1].nombre);
+    segmento[doc-1].contadorPacientes++;
+    segmento[doc-1].recaudacion+=uReserva->precio;
 }
 
 void Insertar(Reserva dato, Reserva *arreglo, int *indice2){ //******* Cambia: tipos de dato

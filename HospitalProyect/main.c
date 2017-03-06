@@ -10,7 +10,8 @@ int main()
     Reserva *arreglo,*uReserva;
         int indice,i;
         int dato,opcion, pos, indice2, adm,opcion2;
-        int pres;
+        float pres;
+        int doctor;
     indice2= -1;
 
     if (fp==NULL){
@@ -73,7 +74,8 @@ int main()
                 case 6:
                        adm=Administrador();
                        if(adm==0){
-                        opcion2=Menu("Seleccione una estadística\n1.Presupuesto del mes\n2.Pacientes con peor salud\n3.Pacientes con mejor salud\n4.\n5.\n6.\n7.\n8.\n9.Salir\n",9);
+                       do{
+                        opcion2=Menu("Seleccione una estadística\n1.Presupuesto del mes\n2.Pacientes con peor salud\n3.Pacientes con mejor salud\n4.Total de pacientes\n5.Doctor mas solicitado\n6.Doctor menos solicitado\n7.Doctor que deja mas ganancias\n8.Doctor que deja menos ganancias\n9.Salir\n",9);
                         switch(opcion2){
                         case 1:
                                 pres=Presupuesto(arreglo, indice2);
@@ -84,18 +86,24 @@ int main()
                         case 3:
                             break;
                         case 4:
+                            //printf("Doctores en el hospital: %d\n", indice);
                             break;
                         case 5:
+                            doctor=doctorMejor(segmento,indice);
+                            printf("El doctor más solicitado es: %s con %d visitas\n",segmento[doctor].nombre, segmento[doctor].contadorPacientes);
                             break;
                         case 6:
+                            doctor=doctorPeor(segmento,indice);
+                            printf("El doctor menos solicitado es: %s con %d visitas\n",segmento[doctor].nombre, segmento[doctor].contadorPacientes);
                             break;
                         case 7:
+                            doctor=doctorRico(segmento,indice);
+                            printf("El doctor que deja mas ganancias es: %s con $%.2f MXN\n",segmento[doctor].nombre, segmento[doctor].recaudacion);
                             break;
                         case 8:
                             break;
-                        case 9:
-                            break;
                         }
+                       }while(opcion2!=9);
                        }
                        else{
                         printf("No tiene autorizacion\n");
