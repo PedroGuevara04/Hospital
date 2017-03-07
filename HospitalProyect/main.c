@@ -86,7 +86,7 @@ int main()
                         case 3:
                             break;
                         case 4:
-                            //printf("Doctores en el hospital: %d\n", indice);
+                            printf("Pacientes en el hospital: %d\n", indice2+1);
                             break;
                         case 5:
                             doctor=doctorMejor(segmento,indice);
@@ -101,6 +101,8 @@ int main()
                             printf("El doctor que deja mas ganancias es: %s con $%.2f MXN\n",segmento[doctor].nombre, segmento[doctor].recaudacion);
                             break;
                         case 8:
+                            doctor=doctorPobre(segmento,indice);
+                            printf("El doctor que deja menos ganancias es: %s con $%.2f MXN\n",segmento[doctor].nombre, segmento[doctor].recaudacion);
                             break;
                         }
                        }while(opcion2!=9);

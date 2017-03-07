@@ -90,8 +90,9 @@ int doctorRico(Doctor *doctores, int max){
 }
 
 int doctorPobre(Doctor *doctores, int max){
-    int ret=0, aux=MAX;
+    int ret=0;
     int j;
+    float aux=10000000;
     for(j=0;j<max;j++,doctores++){
         if(doctores->contadorPacientes<aux){
             aux=doctores[j].contadorPacientes;
