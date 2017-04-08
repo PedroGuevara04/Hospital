@@ -16,7 +16,10 @@ typedef struct {
     int CedDoctor;
     char * nombre;
     DatosA ubicacion;
+    int contadorPacientes;
+    float recaudacion;
 } Doctor;
+
 //===Segunda parte;
 typedef struct {
    char nombre[MAX];
@@ -26,9 +29,12 @@ typedef struct {
 typedef struct {
    int claveS;//clave
    char Motivo[MAX];//Titulo
-   datosP Pasiente;
+   datosP Paciente;
    float precio;
 } Reserva;//libro
+
+typedef struct{//Seccion de hospital que contiene sus propios doctores, pacientes y salas
+}SeccionH;
 
 int Lleno(int indice);
 int Vacio(int indice);
@@ -40,12 +46,21 @@ void Listar(Reserva arreglo[],int indice);
 int Buscar(int dato, Reserva arreglo[], int indice);
 Reserva Borrar (Reserva *arreglo,int pos, int *indice );
 void ListarDato(Reserva arreglo[],int pos);
+void Actualizar(int pos, Reserva *uReserva, Doctor *segmento);
+void InsertarActualizacion(Reserva dato, Reserva *arreglo, int *indice2);
 //=====
 
+int PacienteMejor(Reserva *arreglo, int max2);
+int PacientePeor(Reserva *arreglo, int max2);
+float Presupuesto(Reserva *arreglo, int max2);
+int doctorPeor(Doctor *arreglo, int max2);
+int doctorMejor(Doctor *doctores, int max2);
+int doctorPobre(Doctor *arreglo, int max2);
+int doctorRico(Doctor *doctores, int max2);
 
 Doctor *AddDoctor();
 void fullEst(FILE *fp,Doctor *nDoc);
-void listaDoc(Doctor UDoc);
+void listaDoc(Doctor *UDoc, int major);
 void freeMem(Doctor *UDoc);
 
 #endif // ENCABEZADOH_H_INCLUDED
